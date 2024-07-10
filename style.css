@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #2d2d2d;
+    font-family: 'Crimson Text', serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+/* mainとfooterのコンテンツ幅を設定 */
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+.site-title {
+    width: 110px;
+    line-height: 1px;
+    margin-right: 50px;
+}
+
+.site-title a {
+    display: block;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+/*
+widthをvwで指定することで、画面幅を基準にした横幅になる
+*/
+#mainvisual {
+    width: 100%;
+    margin: 2% auto 0 auto;
+}
+
+#mainvisual img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/*-------------------------------------------
+Header
+-------------------------------------------*/
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    margin: 0 auto 30px auto;
+}
+
+#header ul {
+    display: flex;
+}
+
+#header li {
+    font-size: 0.875rem;
+    margin-right: 30px;
+}
+
+/*
+最後のliタグには margin-right を設定しない
+*/
+#header li:last-child {
+    margin-right: 0;
+}
+
+/*-------------------------------------------
+Content、About
+-------------------------------------------*/
+.content {
+    width: 70%;
+    text-align: left;
+    margin-left: 30%;
+    margin-bottom: 120px;
+}
+
+.content .img {
+    width: 100%;
+    margin-right: 0;
+}
+
+.content .img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.content .text {
+    width: 50%;
+}
+
+/*-------------------------------------------
+link
+-------------------------------------------*/
+
+.link__img {
+    position: relative;
+}
+
+.box1 {
+    margin-bottom: 20px;
+}
+
+.box2 {
+    margin-bottom: 120px;
+}
+
+.link__img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.link__img .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+
+/*-------------------------------------------
+interviews
+-------------------------------------------*/
+
+#interviews h2 {
+    margin-bottom: 40px;
+}
+
+#interviews ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#interviews ul li {
+    width: calc((100% / 2) - 2%);
+    margin-bottom: 40px;
+}
+
+#interviews ul li .img img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+/*-------------------------------------------
+link2
+-------------------------------------------*/
+
+.link__box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 240px;
+}
+
+.link__box-img {
+    width: 50%;
+    position: relative;
+}
+
+.link__box-img:first-child {
+    margin-right: 5px;
+}
+
+.link__box-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.link__box-img .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+    #mainvisual {
+        width: 100%;
+        margin: 0;
+    }
+
+    /*
+  heightをvhで指定することで、画面の高さを基準にした高さになる
+  */
+    #mainvisual img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    /*-------------------------------------------
+  Header
+  -------------------------------------------*/
+    #header {
+        width: 100%;
+    }
+
+    /*-------------------------------------------
+Content、About
+-------------------------------------------*/
+    .content {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+
+    .content .img img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .content .text {
+        width: 100%;
+    }
+
+    /*-------------------------------------------
+link
+-------------------------------------------*/
+
+    .box2 {
+        margin-bottom: 60px;
+    }
+
+
+    .link__img img {
+        height: 200px;
+    }
+
+    /*-------------------------------------------
+interviews
+-------------------------------------------*/
+
+#interviews h2 {
+    margin-bottom: 20px;
+}
+
+#interviews ul {
+    flex-direction: column;
+}
+
+#interviews ul li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#interviews ul li .img img {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------------------
+link2
+-------------------------------------------*/
+
+.link__box {
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+
+.link__box-img {
+    width: 100%;
+}
+
+.link__box-img:first-child {
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.link__box-img img {
+    height: 150px;
+}
+
+}
